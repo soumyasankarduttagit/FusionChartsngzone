@@ -16,19 +16,19 @@ const stackData = {
     {
       category: [
         {
-          label: "Print Media"
+          label: "PM"
         },
         {
-          label: "DB Power"
+          label: "PWD"
         },
         {
-          label: "Radio"
+          label: "RD"
         },
         {
-          label: "MP Printers"
+          label: "MPP"
         },
         {
-          label: "Digital Media"
+          label: "DGM"
         }
       ]
     }
@@ -251,10 +251,10 @@ export class AppComponent {
     this.pidataSource = pidata;
     this.stackDataSource = {
       chart: {
-        caption: "Head Count Analysis with CTC",
+        caption: "Test Report",
         // subcaption: "2012-2016",
-        xaxisname: "CTC",
-        yaxisname: "Business Unit",
+        xaxisname: "XYZ",
+        yaxisname: "Unit",
         formatnumberscale: "1",
         plottooltext:
           "<b>$dataValue</b> <b>$seriesName</b> in $label",
@@ -265,26 +265,26 @@ export class AppComponent {
         {
           category: [
             {
-              label: "Print Media"
+              label: "PM"
             },
             {
-              label: "DB Power"
+              label: "PWD"
             },
             {
-              label: "Radio"
+              label: "RD"
             },
             {
-              label: "MP Printers"
+              label: "MPP"
             },
             {
-              label: "Digital Media"
+              label: "DGM"
             }
           ]
         }
       ],
       dataset: [
         {
-          seriesname: "Head Count",
+          seriesname: "Count",
           data: [
             {
               value: "800"
@@ -304,7 +304,7 @@ export class AppComponent {
           ]
         },
         {
-          seriesname: "CTC",
+          seriesname: "XYZ",
           data: [
             {
               value: "800"
@@ -328,35 +328,35 @@ export class AppComponent {
     //STEP 2 - Chart Data
     const chartData = [
       {
-        label: "Print Media",
+        label: "PM",
         value: "290"
       },
       {
-        label: "DB Power",
+        label: "PWD",
         value: "260"
       },
       {
-        label: "Radio",
+        label: "RD",
         value: "180"
       },
       {
-        label: "MP Printers",
+        label: "MPP",
         value: "140"
       },
       {
-        label: "Digital Media",
+        label: "DGM",
         value: "115"
       },
       {
-        label: "Mobile App",
+        label: "MOA",
         value: "100"
       },
       {
-        label: "Decore Exxoils",
+        label: "DES",
         value: "30"
       },
       {
-        label: "One Stop Solutions",
+        label: "OneU",
         value: "30"
       }
     ];
