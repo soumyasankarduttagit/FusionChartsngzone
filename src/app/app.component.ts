@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, NgZone } from '@angular/core';
 
 const stackData = {
   chart: {
@@ -247,7 +247,7 @@ export class AppComponent {
     {id: 3, name: "Contact 003", description: "Contact 003 des", email: "c003@email.com"},
     {id: 4, name: "Contact 004", description: "Contact 004 des", email: "c004@email.com"}
   ];
-  constructor() {
+  constructor(private zone: NgZone) {
     this.pidataSource = pidata;
     this.stackDataSource = {
       chart: {
@@ -381,12 +381,18 @@ export class AppComponent {
     this.dataSource = dataSource;
   }
   dataplotClick($event) {
-     console.log("$event  ",$event);
     
-    //  let dataIndex = $event.dataObj.dataIndex;
-    //  console.log("dataIndex  ",dataIndex);
-    //  console.log("mian :: ",this.stackDataSource['dataset'][0].data[dataIndex]);
-     this.defaltValue=true;
+     console.log("$event  ",$event);
+     this.zone.run(() => {
+      this.defaltValue=true;
+    });
+    // if(this.defaltValue)
+    //  this.defaltValue=false;
+    //  else
+    // //  let dataIndex = $event.dataObj.dataIndex;
+    // //  console.log("dataIndex  ",dataIndex);
+    // //  console.log("mian :: ",this.stackDataSource['dataset'][0].data[dataIndex]);
+    //  this.defaltValue=true;
      console.log("this.defaltValue  ",this.defaltValue);
 
     // let isSliced = $event.dataObj.isSliced;
